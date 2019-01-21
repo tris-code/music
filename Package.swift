@@ -9,7 +9,7 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            url: "https://github.com/tris-foundation/platform.git",
+            url: "https://github.com/tris-foundation/math.git",
             .branch("master")),
         .package(
             url: "https://github.com/tris-foundation/test.git",
@@ -17,11 +17,11 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "MIDI",
-            dependencies: ["Music"]),
-        .target(
             name: "Music",
-            dependencies: ["Platform"]),
+            dependencies: []),
+        .target(
+            name: "MIDI",
+            dependencies: ["Math", "Music"]),
         .testTarget(
             name: "MusicTests",
             dependencies: ["Test", "Music", "Audio"]),
