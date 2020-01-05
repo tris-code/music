@@ -8,12 +8,8 @@ let package = Package(
         .library(name: "MIDI", targets: ["MIDI"]),
     ],
     dependencies: [
-        .package(
-            url: "https://github.com/tris-code/math.git",
-            .branch("master")),
-        .package(
-            url: "https://github.com/tris-code/test.git",
-            .branch("master")),
+        .package(path: "../Math"),
+        .package(path: "../Test")
     ],
     targets: [
         .target(
