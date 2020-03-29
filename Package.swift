@@ -8,8 +8,8 @@ let package = Package(
         .library(name: "MIDI", targets: ["MIDI"]),
     ],
     dependencies: [
-        .package(path: "../Math"),
-        .package(path: "../Test")
+        .package(path: "../math"),
+        .package(path: "../test")
     ],
     targets: [
         .target(
